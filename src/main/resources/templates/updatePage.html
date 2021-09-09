@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+
+    <div style="width:800px;height:100%;margin-left:270px;">
+        <form action="/update" method="post">
+            ID：<input class="form-control" name="id" type="text" th:value="${user.id}" readonly="readonly"><br>
+            用户名：<input class="form-control" type="text" th:value="${user.username}" name="username"><br>
+            密 码：<input class="form-control" type="text" th:value="${user.password}" name="password"><br>
+            姓 名：<input class="form-control" type="text" th:value="${user.name}" name="name"><br>
+            姓：<input class="form-control" type="text" th:value="${user.firstName}" name="firstName"><br>
+            名：<input class="form-control" type="text" th:value="${user.lastName}" name="lastName"><br>
+            邮 箱：<input class="form-control" type="text" th:value="${user.email}" name="email"><br>
+            公司ID：<input class="form-control" type="text" th:value="${user.companyId}" name="companyId" readonly="readonly"><br>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">提交</button>
+        </form>
+    </div>
+
+</body>
+</html>
